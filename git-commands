@@ -211,3 +211,60 @@ git log --grep "label"
 
 git log -- file file-name
 git log -- file file-name --author=name
+
+
+Stash
+=====
+git stash save "stash1"
+git stash list
+git stash show stash@{x}
+git stash show -p stash@{x}
+
+POP, APPLY, DROP
+================
+
+POP = cut
+===
+git stash pop
+git stash pop stash@{x}
+
+Apply = Copy
+=====
+git stash apply
+git stash apply stash@{x}
+
+Drop  = Delete
+====
+git stash drop
+git stash drop stash@{x}
+============================
+git push
+git pull --rebase
+ls
+git push
+git pull --rebase
+git push
+
+Alias
+=====
+git status
+git config --global alias.s "status"
+git s
+
+git log --oneline
+git config --global alias.l1 "log --oneline"
+git l1
+
+git stash list
+git config --global alias.sl "stash list"
+git sl
+
+git config --list
+git config --global alias.cl "config --list"
+git cl
+
+git commit -m "Test-commit"
+git config --global alias.cmt "commit -m "test-commit""
+git cmt
+
+git config --global --unset alias.cl
